@@ -9,7 +9,7 @@ import { DefaultLayoutComponent } from './containers';
 import { P404Component } from './pages/error/404.component';
 import { P500Component } from './pages/error/500.component';
 import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
+// import { RegisterComponent } from './pages/register/register.component';
 
 export const routes: Routes = [
   {
@@ -36,13 +36,6 @@ export const routes: Routes = [
     component: LoginComponent,
     data: {
       title: 'Login Page'
-    }
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
-    data: {
-      title: 'Register Page'
     }
   },
   {

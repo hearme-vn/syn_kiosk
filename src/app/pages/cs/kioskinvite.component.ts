@@ -51,6 +51,8 @@ export class KioskInviteComponent extends BaseComponent implements OnInit {
     this.apis_service.postAPI(device_list_url, payload, function(res) {
         this.device_list = res;
         // console.log("return devices:", res);
+        if (res && res.length)
+            this.invitationForm.controls.device_index.value = 0;
       }.bind(this));
 
     // Load invitation list
@@ -66,10 +68,10 @@ export class KioskInviteComponent extends BaseComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("Patient id: %s, device id: %s", 
-      this.invitationForm.controls.patient_id.value,
-      this.invitationForm.controls.device_index.value
-      );
+    // console.log("Patient id: %s, device id: %s", 
+    //   this.invitationForm.controls.patient_id.value,
+    //   this.invitationForm.controls.device_index.value
+    //   );
     if (!this.invitationForm.controls.patient_id.value)      return;
 
     let device = this.device_list[this.invitationForm.controls.device_index.value];

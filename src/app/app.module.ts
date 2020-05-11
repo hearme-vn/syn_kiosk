@@ -23,7 +23,7 @@ import { DefaultLayoutComponent } from './containers';
 import { P404Component } from './pages/error/404.component';
 import { P500Component } from './pages/error/500.component';
 import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
+// import { RegisterComponent } from './pages/register/register.component';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -68,8 +68,7 @@ import { ChartsModule } from 'ng2-charts';
     ...APP_CONTAINERS,
     P404Component,
     P500Component,
-    LoginComponent,
-    RegisterComponent
+    LoginComponent
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -1,9 +1,7 @@
+# Patient synchronization 
+- Synchronize patient information with Kiosks 
+- Control Kiosk's feedback
 
-# Zeus-uc: New hearme user console version: Zeus
-- This User console replaces the first version using Angularjs
-- Support OOP
-- More flexible, and easy to upgrade
-- 
 
 ## Platforms
 - Node.js > 10.13
@@ -20,7 +18,7 @@ npm install -g @angular/cli
 ```
 
 ``` bash
-$ cd zeus
+$ cd aih
 # install app's dependencies
 $ npm install
 ```
@@ -45,6 +43,4 @@ $ ng build --configuration=staging
 - Thuc VX <thuc@hearme.vn>
 - LabsOfThings
 
-## References
--	Template URL: https://github.com/coreui/coreui-free-angular-admin-template
--	Demo: https://coreui.io/angular/demo/#/dashboard 
+

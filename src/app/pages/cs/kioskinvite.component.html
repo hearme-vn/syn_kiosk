@@ -32,11 +32,11 @@
                 <div class="form-group row">
                   <label for="device" class="col-sm-3 control-label">Feedback kiosks <code>(*)</code></label>
                   <div class="col-sm-9">
-                    <select class="form-control" id="device" formControlName="device_index" >
-                      <option value="-1" ng-reflect-value="-1" *ngIf="!device_list">Please select Kiosk</option>
+                    <select class="form-control" id="device" formControlName="device_index">
                       <option *ngFor="let device of device_list; index as i" [value]="i" ng-reflect-value="1" [selected]="i==0">
                         {{ device.name }}
                       </option>
+                      <option value="-1" ng-reflect-value="-1" *ngIf="!device_list">There is not any feedback kiosk</option>
                     </select>
                   </div>
                 </div>
