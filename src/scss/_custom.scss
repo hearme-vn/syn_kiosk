@@ -1,0 +1,27 @@
+// For common styles
+
+// Here for header styles
+app-header {
+
+  background: #1dce6c !important;
+
+  .btn-group {
+    padding-right: 10px;
+  }
+
+  .navbar-toggler {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .current_org {
+    background-color: beige;
+  }
+
+}
+
+// For CS menu
+.row_canceled {
+  background-color: wheat;
+}
