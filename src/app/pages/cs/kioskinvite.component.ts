@@ -67,7 +67,7 @@ export class KioskInviteComponent extends BaseComponent implements OnInit {
     if (this.status_checker_schedule)   this.status_checker_schedule.unsubscribe();
   }
 
-  onSubmit() {
+  sendInvitation() {
     // console.log("Patient id: %s, device id: %s", 
     //   this.invitationForm.controls.patient_id.value,
     //   this.invitationForm.controls.device_index.value

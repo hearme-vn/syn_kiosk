@@ -7,7 +7,7 @@
           <strong>Sending patient information</strong>
         </div>
  -->        
-        <form [formGroup]="invitationForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+        <form [formGroup]="invitationForm" class="form-horizontal">
           <div class="card-body">
             <div class="row">
               <div class="col-md-6">
@@ -44,7 +44,7 @@
             </div><!--/.row-->
           </div>
           <div class="card-footer">
-            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-hand-o-left"></i> Invite feedback</button>
+            <button class="btn btn-sm btn-primary" (click)="sendInvitation()"><i class="fa fa-hand-o-left"></i> Invite feedback</button>
             <button class="btn btn-sm btn-danger" (click)="reset_feedback()"><i class="fa fa-television"></i> Reset feedback</button>
             <button type="reset" class="btn btn-sm btn-warning"><i class="fa fa-list-ul"></i> Reset form</button>
           </div>
