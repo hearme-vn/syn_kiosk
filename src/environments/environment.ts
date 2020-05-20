@@ -7,7 +7,7 @@
 export const environment = {
   production: false,
 
-  root: "http://222.252.6.164:7022",
+  root: "http://222.252.6.164:7021",
   URLs: {
     main:   null,
     auth:   null,

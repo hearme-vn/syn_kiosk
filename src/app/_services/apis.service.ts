@@ -73,12 +73,14 @@ export class APIService {
       }.bind(this));
   }
 
-  public postAPI(api_url, data, successCallBack=null, errorCallBack=null) {
+  public postAPI(api_url, data, successCallBack=null, errorCallBack=null, finallyCallBack=null) {
     return this.http.post(api_url, data)
       .subscribe((res) => {
         if (successCallBack)    successCallBack(res);
-      },(err) => {
+      }, (err) => {
         if (errorCallBack)      errorCallBack(err);
+      }, () => {
+        if (finallyCallBack)    finallyCallBack();
       })
 
     // .then(function successCase(response) {

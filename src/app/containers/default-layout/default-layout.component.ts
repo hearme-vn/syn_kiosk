@@ -36,20 +36,21 @@ export class DefaultLayoutComponent {
     this.apis_service.getAPI(rolelist_url, function(res) {
       this.role_list = res;
       // console.log("return organization list:", res);
-      this.getPersonalOrganization();
+      this.getPersonalOrganization(this.getCurrentOrganization.bind(this), function() {
+        this.getCurrentOrganization();
+      }.bind(this));
     }.bind(this));
 
   }
 
   // Get Personal organization and add to organization list  
-  getPersonalOrganization() {
+  getPersonalOrganization(err_cb=null, fin_cb=null) {
     // Load personal organoization
     this.getOrganizationById(null, function(res) {
       // this.rol = res;
       let root_role = { org_id: res.id, organization: res, roles: null };
       this.role_list.unshift(root_role);
-      this.getCurrentOrganization();
-    }.bind(this));
+    }.bind(this), err_cb, fin_cb);
   }
 
   // Get current working organozation
@@ -67,14 +68,15 @@ export class DefaultLayoutComponent {
   }
 
   // Get current organization
-  getOrganizationById(org_id, callback = null) {
+  getOrganizationById(org_id, callback = null, err_cb=null, fin_cb=null) {
     let url = this.apis_service.Based_URLs.main + URIS.main.organization_info;
 
-    let payload = { org_id: org_id }
+    let payload = {}
+    if (org_id)     payload = { org_id: org_id }
     this.apis_service.postAPI(url, payload, function(res) {
       // console.log("Organization Info:", res);
       if (callback)   callback(res);
-    }.bind(this));
+    }.bind(this), err_cb, fin_cb);
 
   }
 
