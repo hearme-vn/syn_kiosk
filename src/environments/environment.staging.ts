@@ -1,20 +1,22 @@
-// Testing environment
 export const environment = {
-  production: false,
+  production: true,
 
-  root: "http://222.252.6.164:7022",
+  root: "",
   URLs: {
-    main:   null,
-    auth:   null,
-    front:  null,
-    imgs:   null,
-    socket:	null,    
-    survey_web: "http://222.252.6.164:7008",
-    public_web:  	"http://222.252.6.164:7011/#",
-    appBase:  	"http://222.252.6.164:7022/zeus/",
+    main:   "https://api.hearme.vn/main/",
+    auth:   "https://api.hearme.vn/oauth/",
+    front:  "https://api.hearme.vn/front/",
+    imgs:   "https://hearme.vn/img/",
+    socket:	{
+            root: "https://comm.hearme.vn",
+            path: "",
+            api: "https://comm.hearme.vn"
+    },
+    survey_web: "https://cx.hearme.vn",
+    public_web:  	"http://topcx.hearme.vn/#",
+    appBase:  	"https://hearme.vn/user/",
   },
-  fbClientID: 	"321172551672315",    // For login by facebook id
- 
-  customer_wait_fb: 120   // Wait customer  for sending feedback; in second
+  fbClientID: 	"321172551672315",
 
+  customer_wait_fb: 120   // Wait customer  for sending feedback; in second
 };

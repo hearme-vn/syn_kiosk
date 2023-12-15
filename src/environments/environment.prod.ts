@@ -16,7 +16,7 @@ export const environment = {
     public_web:  	"http://topcx.hearme.vn/#",
     appBase:  	"https://hearme.vn/user/",
   },
-  fbClientID: 	"321172551672315",
+  fbClientID: 	"xxxxxxx",
 
   customer_wait_fb: 120   // Wait customer  for sending feedback; in second
 };
